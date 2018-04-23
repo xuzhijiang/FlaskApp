@@ -16,6 +16,7 @@ import click
 from flask_migrate import Migrate, upgrade
 from app import create_app, db
 from app.models import User, Follow, Role, Permission, Post, Comment
+from app.fake import users, posts
 
 app = create_app(os.getenv('FLASK_CONFIG') or 'default')
 migrate = Migrate(app, db)
@@ -76,3 +77,8 @@ def deploy():
 
     # ensure all users are following themselves
     User.add_self_follows()
+
+@app.cli.command()
+def generate_fake():
+    users(200)
+    posts(200)
