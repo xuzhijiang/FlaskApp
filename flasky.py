@@ -80,5 +80,5 @@ def deploy():
 
 @app.cli.command()
 def generate_fake():
-    users(200)
-    posts(200)
+    users(50)
+    posts(50)
