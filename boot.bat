@@ -1,12 +1,9 @@
-set SECRET_KEY=SECRET_KEY
-set MAIL_SERVER=YOUR_MAIL_SERVER
+set SECRET_KEY=secret_key
+set MAIL_SERVER=smtp.163.com
 set MAIL_PORT=465
 set MAIL_USE_SSL=1
 set MAIL_USE_TLS=0
-set MAIL_USERNAME=YOUR_USERNAME
-set MAIL_PASSWORD=YOUR_PASSWORD
-set FLASKY_ADMIN=YOUR_ADMIN
+set MAIL_USERNAME=163_email
+set MAIL_PASSWORD=163_email_password
+set FLASKY_ADMIN=163_email
 set FLASK_APP=flasky.py
-flask deploy
-flask generate_fake
-flask profile
